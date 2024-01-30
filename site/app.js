@@ -85,15 +85,20 @@ Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
 });
 
-
 let usercard = document.getElementById("usercard");
 
+// Создаем и добавляем имя пользователя
 let p = document.createElement("p");
-
-p.innerText = `${tg.initDataUnsafe.user.first_name}
-${tg.initDataUnsafe.user.last_name}`;
-
+p.innerText = ${tg.initDataUnsafe.user.first_name} ${tg.initDataUnsafe.user.last_name};
 usercard.appendChild(p);
+
+// Создаем и добавляем ссылку на сайт
+let a = document.createElement("a");
+a.href = "https://example.com"; // Замените "https://example.com" на URL вашего сайта
+a.target = "_blank";
+a.innerText = "Перейти на сайт";
+
+usercard.appendChild(a);
 
 
 
